@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>Birthday ❤️</title>
+
+<style>
+body{
+height:100vh;
+margin:0;
+display:flex;
+justify-content:center;
+align-items:center;
+font-family:Arial;
+color:white;
+background:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url("image.jpg") center/cover;
+animation:move 10s infinite alternate;
+}
+
+@keyframes move{
+from{background-position:center;}
+to{background-position:top;}
+}
+
+.box{
+background:rgba(0,0,0,.4);
+padding:30px;
+border-radius:20px;
+text-align:center;
+}
+
+input,button{
+padding:12px;
+border-radius:10px;
+border:none;
+}
+
+button{
+background:#ff4f9a;
+color:white;
+margin-top:10px;
+}
+
+#page{
+display:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box" id="login">
+<h2>🔒 اكتب الباسورد</h2>
+<input type="password" id="pass">
+<br>
+<button onclick="openPage()">دخول</button>
+</div>
+
+<div class="box" id="page">
+<h1>Happy Birthday ❤️</h1>
+<p>كل سنة وانتي طيبة ✨</p>
+</div>
+
+<script>
+function openPage(){
+if(document.getElementById("pass").value=="Happy Birthday Dega"){
+login.style.display="none";
+page.style.display="block";
+}
+else{
+alert("الباسورد غلط");
+}
+}
+</script>
+
+</body>
+  </html>
